@@ -23,6 +23,8 @@ class SOStream:
         self.min_pts = 3
         self.M = [[]]
         self.merge_threshold = 3
+        self.merge_number = 0
+        self.fade_number = 0
 
     def process(self, vt):
         winner_cluster = min_dist(vt, self.M[-1])
