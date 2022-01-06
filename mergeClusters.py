@@ -7,7 +7,8 @@ def mean(a, b, wieght_a, wieght_b):
 def dist(v1, v2):
     return np.sqrt(((v1 - v2) ** 2).sum())
 
-def merge_clusters(win_cluster, overlaping_clusters):
+def merge_clusters(win_cluster, overlaping_clusters, sos):
+    sos.merge_number += 1
     merged_cluster = None
     deleted_clusters = []
     for cluster in overlaping_clusters:
